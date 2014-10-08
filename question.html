@@ -23,9 +23,7 @@
     <link rel="stylesheet" type="text/css" href="src/css/question.css"/>
     <link rel="stylesheet" type="text/css" href="src/css/an.css"/>
     <script src="src/js/common/zepto_base.min.js" type="text/javascript" charset="utf-8"></script>
-    <!--<script src="src/js/m.js" type="text/javascript" charset="utf-8"></script>-->
-    <script type="text/javascript" src="src/js/common/scroll.js"></script>
-    <script type="text/javascript" src="src/js/common/common.js"></script>
+    <script type="text/javascript" src="src/js/common/template.js"></script>
 
 </head>
 
@@ -35,39 +33,7 @@
     <div class="" >
 
         <div class="topic-list ">
-            <ul class="topic">
-                <li class="topic-title">
-                    <span class="ib topic-num"><h1>1</h1></span>
-                    <span class="ib topic-text">
-                        问
-                    </span>
-                </li>
-                <li class="topic-name">
-                    <p class="text-wrap">
-                        人在江湖漂，哪有不挨刀，当初的你生下来有没有挨那一刀？看看我们谯美不会选你呢？
-                    </p>
-                </li>
-                <li class="topic-content">
-                    <ul class="topic-options">
-                        <li>
-                            <span class="topic-option-name pull-left">a.土肥圆</span>
-                            <input type="checkbox" class="pull-right" />
-                        </li>
-                        <li>
-                            <span class="topic-option-name pull-left">b.土肥圆</span>
-                            <input type="checkbox" class="pull-right" />
-                        </li>
-                        <li>
-                            <span class="topic-option-name pull-left">c.土肥圆</span>
-                            <input type="checkbox" class="pull-right" />
-                        </li>
-                        <li>
-                            <span class="topic-option-name pull-left">d.土肥圆</span>
-                            <input type="checkbox" class="pull-right" />
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+
 
             <ul class="topic">
                 <li class="topic-title">
@@ -119,6 +85,36 @@
 
 
 </section>
+
+<script type="text/html" id="topicTemplate">
+    {{each  list  as value  topic}}
+        <ul class="topic" num="{{topic.topicNum}}">
+            <li class="topic-title">
+                <span class="ib topic-num"><h1>{{topic.topicNum}}</h1></span>
+                        <span class="ib topic-text">
+                            问
+                        </span>
+            </li>
+            <li class="topic-name">
+                <p class="text-wrap">
+                    {{topic.topicTitle}}
+                </p>
+            </li>
+            <li class="topic-content">
+                <ul class="topic-options">
+                    {{each topic.topicOption as value  option}}
+                        <li>
+                            <span class="topic-option-name pull-left">{{option.optionName}}.{{option.optionValue}}</span>
+                            <input type="checkbox" class="pull-right" />
+                        </li>
+                    {{/each}}
+                </ul>
+            </li>
+        </ul>
+
+    {{/each}}
+</script>
+
 <!-- 结果层 -->
 <div class="layer-result success text-center " >
     <i class="ib all-img layer-result-img"></i>
