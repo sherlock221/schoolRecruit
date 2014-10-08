@@ -1,5 +1,6 @@
 var MobileUI = {
 
+    list    : $("#topic-list")
 
 };
 
@@ -28,6 +29,21 @@ var  Message = {
 }
 
 
+function loadData(data){
+
+    //加载问题
+    $.getJSON("topic.json",function(data){
+        var newData = {list : data};
+        var hl = template("topicTp",newData);
+        MobileUI.list.html(hl);
+
+        MobileEvent.init();
+    });
+
+
+
+};
+
 var MobileEvent = {
     init: function () {
 
@@ -35,8 +51,45 @@ var MobileEvent = {
         this.form();
 
 
+
+
     },
     form: function () {
+
+
+        //switch选择
+        MobileUI.list.find(".topic-options").on("tap",".switch-main",function(){
+            var $this = $(this);
+            var status = $this.attr("status");
+            var paper = $this.find(".switch-paper");
+            //取消选中
+            if(status == "1"){
+
+                     paper.css("-webkit-transform","translateX(28px)");
+                    $this.addClass("error").removeClass("success");
+
+                status = 0;
+            }
+            //选中
+            else{
+                    paper.css("-webkit-transform","translateX(0)");
+                    $this.addClass("success").removeClass("error");
+
+                    //其他組的設為關閉
+               var tps = $this.closest("li").siblings().find(".switch-main");
+                tps.each(function(){
+                    var _this = $(this);
+                    _this.attr("status","0");
+                    _this.find(".switch-paper").css("-webkit-transform","translateX(28px)");
+                    _this.addClass("error").removeClass("success");
+                });
+
+                status = 1;
+            }
+
+            $this.attr("status",status);
+        });
+
 
 
 
@@ -50,5 +103,6 @@ var MobileEvent = {
 
 
 $(function () {
-    MobileEvent.init();
+    //加载配置
+    loadData();
 });

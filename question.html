@@ -20,10 +20,13 @@
     <title>习悦校招答题</title>
     <link rel="stylesheet" type="text/css" href="src/css/common/normalize.css"/>
 
+
     <link rel="stylesheet" type="text/css" href="src/css/question.css"/>
     <link rel="stylesheet" type="text/css" href="src/css/an.css"/>
     <script src="src/js/common/zepto_base.min.js" type="text/javascript" charset="utf-8"></script>
+
     <script type="text/javascript" src="src/js/common/template.js"></script>
+
 
 </head>
 
@@ -32,42 +35,10 @@
 <section id="main" class="">
     <div class="" >
 
-        <div class="topic-list ">
+        <div class="topic-list " id="topic-list">
 
 
-            <ul class="topic">
-                <li class="topic-title">
-                    <span class="ib topic-num"><h1>2</h1></span>
-                    <span class="ib topic-text">
-                        问
-                    </span>
-                </li>
-                <li class="topic-name">
-                    <p class="text-wrap">
-                        人在江湖漂，哪有不挨刀，当初的你生下来有没有挨那一刀？看看我们谯美不会选你呢？
-                    </p>
-                </li>
-                <li class="topic-content">
-                    <ul class="topic-options">
-                        <li>
-                            <span class="topic-option-name pull-left">a.土肥圆</span>
-                            <input type="checkbox" class="pull-right" />
-                        </li>
-                        <li>
-                            <span class="topic-option-name pull-left">b.土肥圆</span>
-                            <input type="checkbox" class="pull-right" />
-                        </li>
-                        <li>
-                            <span class="topic-option-name pull-left">c.土肥圆</span>
-                            <input type="checkbox" class="pull-right" />
-                        </li>
-                        <li>
-                            <span class="topic-option-name pull-left">d.土肥圆</span>
-                            <input type="checkbox" class="pull-right" />
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+
         </div>
 
         <div class="text-center">
@@ -86,37 +57,52 @@
 
 </section>
 
-<script type="text/html" id="topicTemplate">
-    {{each  list  as value  topic}}
-        <ul class="topic" num="{{topic.topicNum}}">
-            <li class="topic-title">
-                <span class="ib topic-num"><h1>{{topic.topicNum}}</h1></span>
+
+<script type="text/html"  id="topicTp">
+    <%for (var i=0;i<list.length;i++) {  %>
+    <ul class="topic" num="<%=list[i].topicNum  %>">
+        <li class="topic-title">
+            <span class="ib topic-num"><h1><%=list[i].topicNum   %></h1></span>
                         <span class="ib topic-text">
                             问
                         </span>
-            </li>
-            <li class="topic-name">
-                <p class="text-wrap">
-                    {{topic.topicTitle}}
-                </p>
-            </li>
-            <li class="topic-content">
-                <ul class="topic-options">
-                    {{each topic.topicOption as value  option}}
-                        <li>
-                            <span class="topic-option-name pull-left">{{option.optionName}}.{{option.optionValue}}</span>
-                            <input type="checkbox" class="pull-right" />
-                        </li>
-                    {{/each}}
-                </ul>
-            </li>
-        </ul>
+        </li>
+        <li class="topic-name">
+            <p class="text-wrap">
+                <%=list[i].topicTitle  %>
+            </p>
+        </li>
+        <li class="topic-content">
+            <ul class="topic-options">
+                <%for (var j=0;j<list[i].topicOption.length;j++) {  %>
 
-    {{/each}}
+                <li class="">
+                    <div class=" text-wrap topic-option-name pull-left"><%=list[i].topicOption[j].optionName  %>.<%=list[i].topicOption[j].optionValue  %></div>
+
+                    <div class="switch-wrap">
+                        <div class="switch-main error" status="0">
+
+                            <div class="switch-paper"></div>
+                            <div class=" switch-left">
+                                <i class="ib all-img  icon-false"></i>
+                            </div>
+
+                            <div class=" switch-right">
+
+                                <i class="ib all-img  icon-true"></i>
+                            </div>
+                        </div>
+                     </div>
+                </li>
+                <%}  %>
+            </ul>
+        </li>
+    </ul>
+    <%}  %>
+
 </script>
-
 <!-- 结果层 -->
-<div class="layer-result success text-center " >
+<div class="layer-result success text-center "  style="display:  none;">
     <i class="ib all-img layer-result-img"></i>
     <div class="layer-result-content">
         <h1 style="font-size: 25px; margin-bottom: -8px;">恭喜您！</h1>
@@ -135,6 +121,8 @@
     </div>
 </div>
 </body>
+
+
 <script src="src/js/question.js" type="text/javascript" charset="utf-8"></script>
 
 </html>
