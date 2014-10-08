@@ -1,0 +1,282 @@
+/* scroll 界面基本配置 */
+
+*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+input, textarea  { -webkit-user-select:text; }
+
+
+html, body {
+
+
+    /** 字体类型 **/
+    font-family: "microsoft yahei", Tahoma, Verdana, Arial, Helvetica,"宋体", sans-serif;
+    /** 字体大小 **/
+    font-size: 12px;
+    /** 字体颜色 **/
+    color: #fff;
+
+    background: url("../../imgs/gezi.jpg") repeat;
+    background-size: 10px 10px;
+
+    line-height : 1.5;
+}
+
+body{
+    padding: 0;
+    margin: 0 auto;
+}
+
+ul, li, dl, dt, dd{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    /** 字体颜色 **/
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+
+/**
+ * 常用工具类
+ */
+
+.text-center{
+    text-align: center;
+}
+.ib {
+    /** ie8+ **/
+    display: inline-block;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+.w1000{
+    width: 1003px;
+}
+
+.hidden-val {
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+.content,
+.content .wrapper {
+
+}
+
+
+#main{
+
+}
+
+.topic-list{
+
+
+
+}
+
+.topic{ overflow:  hidden;  margin-left: 28px;
+    margin-top: 23.5px;}
+.topic-num{
+    width: 54px;
+    height: 54px;
+    border-radius: 80px;
+    background: #626262;
+    text-align: center;
+}
+.topic-num > h1{
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 31px;
+    font-weight: normal;
+    position: relative;
+    top: 3px;
+}
+.topic-text{
+    color: #90cd00;
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+    top: 15px;
+    margin-left: 5px;
+}
+.topic-name{
+    color: #313131;
+    font-size: 13px;
+    margin-right: 60px;
+    line-height: 23px;
+    margin-top: 34px;
+}
+
+.text-wrap {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.topic-content{
+    margin-bottom: 34px;
+    margin-right: 14px;
+    color: #313131;
+    font-size: 13px;
+    margin-top: 30px;
+}
+.topic-options{
+    overflow: hidden;
+}
+.topic-options > li{
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 21px;
+}
+
+/* sprite图片 */
+.all-img {
+    background: url('../../imgs/school.png');
+    background-size: 500px 455px;
+    background-repeat: no-repeat;
+}
+
+.btnBase{
+    margin: 0;
+    border: 0;
+    padding: 10px 80px;
+    background: #ff6552;
+    border-radius: 4px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0px 3px 0px #b21d1e;
+    margin-bottom: 35px;
+}
+
+.font-submit{
+    background-position:  -129.5px -114px;
+    position: relative;
+    top: 4px;
+
+    width: 89px;
+    height: 21px;
+}
+
+.close-red{
+    background-position: -129.5px  -34px;
+    width: 41px;
+    height: 41px;
+    position: relative;
+    top: 10px;
+    margin-right: 7px;
+}
+
+.layer-message{
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+
+    border : 1px solid #f4614e;
+    border-radius: 5px;
+
+    position: fixed;
+    top: 10%;
+    left: 20px;
+    background: #ffffff;
+
+    display: none;
+
+}
+.layer-message-title{
+    font-size: 18px;
+    color: #f4614e;
+
+}
+.layer-message p{
+    font-size: 18px;
+    color: #f4614e;
+}
+
+.layer-result{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+}
+.layer-result.success{
+    background: #90cd00;
+}
+.layer-result.error-50{
+    background: #d59539;
+
+}
+
+.layer-result.error-less{
+    background: #009fcd;
+}
+
+.layer-result-img{
+    margin-top: 37px;
+    margin-bottom: 20px;
+}
+
+.success  .layer-result-img{
+    background-position:  0  -141px;
+    width: 82px;
+    height: 84.5px;
+}
+
+.error-less .layer-result-img{
+    background-position:  -82px  -141px;
+    width: 82px;
+    height: 84.5px;
+}
+.error-50 .layer-result-img{
+    background-position:  -164px  -141px;
+    width: 82px;
+    height: 84.5px;
+}
+
+.success .hr-email{
+    display: block;
+}
+
+.layer-result-content{
+    padding: 0 24px;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left;
+}
+.hr-email{
+    padding: 13px 17px;
+    text-align: left;
+    border-radius: 4px;
+    background: #e2f2bd;
+    color: #628b00;
+    font-size: 16px;
+}
+
+.hr-email{
+    display: none;
+}

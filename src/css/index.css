@@ -74,22 +74,7 @@
 
 
 
-.success{
-    background-position:  0  -141px;
-    width: 82px;
-    height: 84.5px;
-}
 
-.error-less{
-    background-position:  -82px  -141px;
-    width: 82px;
-    height: 84.5px;
-}
-.error-50{
-    background-position:  -164px  -141px;
-    width: 82px;
-    height: 84.5px;
-}
 
 .women{
     background-position:  0 -225.5px;
@@ -185,6 +170,85 @@
 }
 
 .font-xy-who{
+
+}
+
+.mt-circle{
     margin-top: 30px;
     margin-bottom: 18px;
+}
+
+.list-info{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.list-info > li{
+    margin-bottom: 11px;
+    font-size: 16px;
+    color: #343434;
+    text-align: left;
+}
+
+.list-info > li >span:before{
+
+}
+
+.list-info.info-02{
+    width: 240px;
+}
+.list-info.info-02 >li{
+    color: #ffffff;
+
+}
+
+.trans{
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    /*border-bottom: 7px solid transparent;*/
+    border-top: 7px solid #ea245d;
+}
+.trans-right{
+    -webkit-transform : rotate(-90deg);
+    transform : rotate(-90deg);
+
+    position: relative;
+    top: -2px;
+    margin-right: 8px;
+}
+
+.trans.white{
+    border-top: 7px solid #ffffff;
+}
+.women{
+    position: absolute;
+    bottom: -2px;
+    left: 36px;
+}
+
+.font-game{
+    position: relative;
+    top: 4px;
+}
+.btnBase{
+    margin: 0;
+    border: 0;
+    padding: 10px 57px;
+    background: white;
+    border-radius: 4px;
+
+    position: absolute;
+    bottom: 33px;
+    left: 50%;
+    margin-left: -122px;
+    text-align: center;
+    box-shadow: 0px 3px 0px rgba(0,0,0,0.3);
+}
+
+.font-submit{
+    background-position:  -129.5px -114px;
+
 }
