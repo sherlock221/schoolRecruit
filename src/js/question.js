@@ -1,6 +1,8 @@
 var MobileUI = {
 
-    list    : $("#topic-list")
+    list    : $("#topic-list"),
+    questionSub : $("#questionSubmit"),
+    message   :  $("#layer-message")
 
 };
 
@@ -44,6 +46,10 @@ function loadData(data){
 
 };
 
+var as = ["b","c","c","c","c","b","a","c"];
+
+var calc = 0;
+
 var MobileEvent = {
     init: function () {
 
@@ -56,6 +62,70 @@ var MobileEvent = {
     },
     form: function () {
 
+
+        //提交
+        MobileUI.questionSub.bind("tap",function(){
+
+            //检测非空
+            var topics = MobileUI.list.find(".topic");
+
+
+
+            for(var i =0 ;i<topics.length; i++){
+
+                var $this = $(topics[i]);
+                var main = $this.find(".switch-main");
+
+                var num =  $this.attr("num");
+                var check = checkSwitchMain(main);
+                if(check.isPass){
+
+                    if(i  >= 2){
+
+                        var option = check.dom.closest("li").attr("option");
+                        if(option == as[i-2]){
+                            calc++
+                        }
+
+                    }
+
+                }
+                else{
+                    //未选中
+                    $("html,body").scrollTop($this.offset().top);
+                    MobileUI.message.show();
+                    setTimeout(function(){
+                        MobileUI.message.hide();
+                    },1500);
+                    return;
+                }
+
+
+
+            }
+
+            alert(calc);
+
+            calc = 0 ;
+
+
+        });
+
+
+        function checkSwitchMain(main){
+            for(var j=0;j<main.length;j++){
+                var  other =  $(main[j]);
+                if(other.hasClass("success")){
+                    return {dom : other , isPass : true}
+                }
+                else{
+
+
+                }
+            }
+
+            return {dom : "" , isPass : false}
+        }
 
         //switch选择
         MobileUI.list.find(".topic-options").on("tap",".switch-main",function(){

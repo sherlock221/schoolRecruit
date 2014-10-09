@@ -42,14 +42,14 @@
         </div>
 
         <div class="text-center">
-                <button type="button" class="btnBase"><i class="all-img font-submit ib"></i></button>
+                <button type="button" class="btnBase" id="questionSubmit"><i class="all-img font-submit ib"></i></button>
         </div>
 
     </div>
 
 
     <!--错误弹出-->
-    <div class="layer-message">
+    <div class="layer-message" id="layer-message">
         <h1 class="layer-message-title"><i class="ib all-img close-red"></i>出错了！！！</h1>
         <p>这个问题你还没有回答哦！</p>
     </div>
@@ -76,7 +76,7 @@
             <ul class="topic-options">
                 <%for (var j=0;j<list[i].topicOption.length;j++) {  %>
 
-                <li class="">
+                <li class="" option="<%=list[i].topicOption[j].optionName  %>">
                     <div class=" text-wrap topic-option-name pull-left"><%=list[i].topicOption[j].optionName  %>.<%=list[i].topicOption[j].optionValue  %></div>
 
                     <div class="switch-wrap">
