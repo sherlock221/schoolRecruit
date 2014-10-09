@@ -1,7 +1,8 @@
 var MobileUI = {
 
     screenAll  : $("#screen-all"),
-    screen01   : $("#screen00")
+    screen01   : $("#screen00"),
+    gameStart  :$("#gameStart")
 };
 
 //var imgList = ["./imgs/school.png"];
@@ -30,6 +31,9 @@ var MobileEvent = {
         var width = document.body.offsetWidth;
 
 
+        MobileUI.gameStart.tap(function(){
+            window.location.href   =  "question.html"
+        });
 
         //滚动条
         var wrapper_scroll = new Scroller('#main', {
