@@ -22,9 +22,8 @@
 
 
     <link rel="stylesheet" type="text/css" href="src/css/question.css"/>
-    <link rel="stylesheet" type="text/css" href="src/css/an.css"/>
     <script src="src/js/common/zepto_base.min.js" type="text/javascript" charset="utf-8"></script>
-
+    <script src="src/js/common/loader.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" src="src/js/common/template.js"></script>
 
 
@@ -32,7 +31,7 @@
 
 <body>
 
-<section id="main" class="">
+<section id="main" class="hide">
     <div class="" >
 
         <div class="topic-list " id="topic-list">
@@ -41,7 +40,7 @@
 
         </div>
 
-        <div class="text-center">
+        <div class="text-center ">
                 <button type="button" class="btnBase" id="questionSubmit"><i class="all-img font-submit ib"></i></button>
         </div>
 
@@ -102,13 +101,12 @@
 
 </script>
 <!-- 结果层 -->
-<div class="layer-result success text-center "  style="display:  none;">
+<div class="layer-result  text-center "  style="display:  none;" id="layer-result">
     <i class="ib all-img layer-result-img"></i>
     <div class="layer-result-content">
-        <h1 style="font-size: 25px; margin-bottom: -8px;">恭喜您！</h1>
+        <h1 style="font-size: 25px; margin-bottom: -8px;"></h1>
         <p style="">
-            恭喜您!
-            您与习悦的匹配度超过了90%，您很适合我们公司哦，我们的福利，只有您想不到，没有我们做不到的，来了习悦，您将摆脱快播和陌陌的缠绕，您是想要成为IT男？高富帅？我们都能成就你，快用你的简历猛砸我们吧！我们的HR在等着翻你牌呢！
+
         </p>
 
         <section class="hr-email">

@@ -2,17 +2,13 @@ var MobileUI = {
 
     list    : $("#topic-list"),
     questionSub : $("#questionSubmit"),
-    message   :  $("#layer-message")
+    message   :  $("#layer-message"),
+    result     :   $("#layer-result")
 
 };
 
-//var imgList = ["./imgs/school.png"];
-//var ld = new loader(imgList);
-//ld.loadend(function(i){
-//
-//}).complete(function(){
-//
-//});
+var imgList = ["./imgs/school.png","./imgs/gezi.jpg"];
+
 
 var  Message = {
 
@@ -35,11 +31,17 @@ function loadData(data){
 
     //加载问题
     $.getJSON("topic.json",function(data){
-        var newData = {list : data};
-        var hl = template("topicTp",newData);
-        MobileUI.list.html(hl);
 
-        MobileEvent.init();
+        var ld = new loadermsk(imgList, "#0e79ef", function () {
+            var newData = {list : data};
+            var hl = template("topicTp",newData);
+            MobileUI.list.html(hl);
+            MobileEvent.init();
+           $("#main").removeClass("hide");
+
+
+        });
+
     });
 
 
@@ -55,9 +57,6 @@ var MobileEvent = {
 
         //初始化配置
         this.form();
-
-
-
 
     },
     form: function () {
@@ -86,7 +85,6 @@ var MobileEvent = {
                         if(option == as[i-2]){
                             calc++
                         }
-
                     }
 
                 }
@@ -104,10 +102,32 @@ var MobileEvent = {
 
             }
 
-            alert(calc);
+            var title,content;
+            //显示结果  7-8
+            if(calc >=  7){
+                title   =   Message.success.title;
+                content =    Message.success.content;
+                MobileUI.result.addClass("success");
+            }
+            //显示结果  5-6
+            else  if(calc >4 && calc  <7){
+                title   =   Message.errorless.title;
+                content =    Message.errorless.content;
+                MobileUI.result.addClass("error-less");
+            }
+            //显示结果  4
+            else  if(calc <=4){
+                title   =   Message.error50.title;
+                content =    Message.error50.content;
+                MobileUI.result.addClass("error-50");
+            }
 
+            MobileUI.result.find("h1").html( title);
+            MobileUI.result.find("p").html( content);
+
+            MobileUI.result.show();
+            MobileUI.list.hide();
             calc = 0 ;
-
 
         });
 
@@ -173,6 +193,5 @@ var MobileEvent = {
 
 
 $(function () {
-    //加载配置
     loadData();
 });

@@ -213,14 +213,11 @@ a:hover {
 
 .layer-result{
     width: 100%;
-    height: 100%;
 
     position: absolute;
-
     z-index: 2;
     left: 0;
-    right: 0;
-    bottom: 0;
+
     top: 0;
 
 }
@@ -260,6 +257,7 @@ a:hover {
 
 .success .hr-email{
     display: block;
+    margin-bottom: 30px;
 }
 
 .layer-result-content{
@@ -300,9 +298,7 @@ a:hover {
 
 }
 .switch-wrap{
-
     height: 30px;
-    background: #ffffff;
 }
 .switch-main > div{
     height: inherit;
