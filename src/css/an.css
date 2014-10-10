@@ -16,6 +16,7 @@
 .heart{
     -webkit-animation: swing  0.6s ease 4.6s 1 both;
 }
+
 .font-say-delay{
     position: absolute;
     z-index: 3;
@@ -23,18 +24,64 @@
     height: 27.5px;
     background: #ea245d;
     display: inline-block;
-    top: 9px;
+    top: 10px;
 
 }
+
+
+
+/** 第二图 **/
+.circle-middle{
+    -webkit-animation: zoomIn  0.6s ease  0.3s 1 both;
+}
+.font-xy-who{
+    -webkit-animation: fadeIn  0.6s ease  0.6s 1 both;
+}
+.list-info>li:nth-child(1){
+    -webkit-animation: fadeInLeft  0.6s ease   1s 1 both;
+}
+.list-info>li:nth-child(2){
+    -webkit-animation: fadeInLeft  0.6s ease   1.6s 1 both;
+}
+.list-info>li:nth-child(3){
+    -webkit-animation: fadeInLeft  0.6s ease   2.2s 1 both;
+}
+
+.list-info>li:nth-child(4){
+    -webkit-animation: fadeInLeft  0.6s ease   2.8s 1 both;
+}
+
+.list-info>li:nth-child(5){
+    -webkit-animation: fadeInLeft  0.6s ease    3.2s 1 both;
+}
+
+.list-info>li:nth-child(6){
+    -webkit-animation: fadeInLeft  0.6s ease   3.8s 1 both;
+}
+
+
 @-webkit-keyframes typeWriter{
     0%{
         -webkit-transform: translateX(0px);
+        transform: translateX(0);
     }
 
     100%{
         -webkit-transform: translateX(173px);
+        transform: translateX(173px);
+    }
+}
+
+@keyframes typeWriter{
+    0%{
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
     }
 
+    100%{
+        -webkit-transform: translateX(173px);
+        transform: translateX(173px);
+    }
 }
 
 
