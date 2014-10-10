@@ -1,11 +1,11 @@
 .font-mm{
-    -webkit-animation: bounceInDown  1s ease 0.3s 1 both;
+    -webkit-animation: bounceInDown  1s ease 0.8s 1 both;
 }
 .bg-circle-xy{
-    /*-webkit-animation: zoomIn  0.5s ease 1.5s 1 both;*/
+    -webkit-animation: zoomIn  0.6s ease 0.3s 1 both;
 }
 .font-yu{
-    -webkit-animation: lightSpeedIn  0.8s ease 1.5s 1 both;
+    -webkit-animation: lightSpeedIn  0.8s ease 1.8s 1 both;
 }
 .font-say-delay{
     -webkit-animation: typeWriter  1.6s linear 2.4s 1 both;
@@ -22,9 +22,13 @@
     z-index: 3;
     width: 172.5px;
     height: 27.5px;
-    background: #ea245d;
+    background:     #ea245d;
     display: inline-block;
     top: 10px;
+    left:50%;
+    margin-left: -86px;
+
+
 
 }
 
@@ -32,31 +36,38 @@
 
 /** 第二图 **/
 .circle-middle{
-    -webkit-animation: zoomIn  0.6s ease  0.3s 1 both;
+    -webkit-animation: rollIn  0.6s ease  0.3s 1 both;
 }
-.font-xy-who{
-    -webkit-animation: fadeIn  0.6s ease  0.6s 1 both;
+
+
+
+.font-xy-who    ,   .font-why-mm{
+    -webkit-animation: fadeIn  0.6s ease  1.4s 1 both;
+}
+
+#gameStart{
+    -webkit-animation: fadeIn  1s ease  4.6s 1 both;
 }
 .list-info>li:nth-child(1){
-    -webkit-animation: fadeInLeft  0.6s ease   1s 1 both;
+    -webkit-animation: fadeInLeft  0.5s ease   2s 1 both;
 }
 .list-info>li:nth-child(2){
-    -webkit-animation: fadeInLeft  0.6s ease   1.6s 1 both;
+    -webkit-animation: fadeInLeft  0.6s ease   2.6s 1 both;
 }
 .list-info>li:nth-child(3){
-    -webkit-animation: fadeInLeft  0.6s ease   2.2s 1 both;
+    -webkit-animation: fadeInLeft  0.6s ease   3.2s 1 both;
 }
 
 .list-info>li:nth-child(4){
-    -webkit-animation: fadeInLeft  0.6s ease   2.8s 1 both;
+    -webkit-animation: fadeInLeft  0.6s ease   3.8s 1 both;
 }
 
 .list-info>li:nth-child(5){
-    -webkit-animation: fadeInLeft  0.6s ease    3.2s 1 both;
+    -webkit-animation: fadeInLeft  0.6s ease    4.4s 1 both;
 }
 
 .list-info>li:nth-child(6){
-    -webkit-animation: fadeInLeft  0.6s ease   3.8s 1 both;
+    -webkit-animation: fadeInLeft  0.6s ease   5.2s 1 both;
 }
 
 

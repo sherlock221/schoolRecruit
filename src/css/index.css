@@ -71,10 +71,24 @@
 .font-game{ background-position: 0 -114px; width: 130px; height: 21px}
 
 
+.arrow {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    margin-left: -8px;
 
+    -webkit-animation: pointUp  1.2s ease-in 0s infinite;
+}
 
-
-
+.icon {
+    background-image: url("../../imgs/icon.png");
+    background-size: 64px 64px;
+}
+.icon-arrow {
+    width: 16px;
+    height: 16px;
+    background-position: 0 -16px;
+}
 
 .women{
     background-position:  0 -225.5px;
@@ -225,7 +239,7 @@
 }
 .women{
     position: absolute;
-    bottom: -2px;
+    bottom: 3px;
     left: 36px;
 }
 

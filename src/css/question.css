@@ -217,7 +217,7 @@ a:hover {
     position: absolute;
     z-index: 2;
     left: 0;
-
+    height: 110%;
     top: 0;
 
 }
@@ -265,6 +265,7 @@ a:hover {
     font-size: 16px;
     line-height: 28px;
     text-align: left;
+
 }
 .hr-email{
     padding: 13px 17px;

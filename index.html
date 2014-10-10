@@ -23,10 +23,15 @@
     <link rel="stylesheet" type="text/css" href="src/css/index.css"/>
     <link rel="stylesheet" type="text/css" href="src/css/an.css"/>
     <script src="src/js/common/zepto_base.min.js" type="text/javascript" charset="utf-8"></script>
-    <!--<script src="src/js/m.js" type="text/javascript" charset="utf-8"></script>-->
-    <script type="text/javascript" src="src/js/common/scroll.js"></script>
-    <script type="text/javascript" src="src/js/common/common.js"></script>
+    <script src="src/js/m.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="src/js/common/loader.min.js"></script>
 
+    <style  type="text/css">
+        .mp_loading{
+            background-color: #ea245d   !important;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -37,6 +42,11 @@
 
             <li class="screen" id="screen00">
                <div class="content hide">
+
+                   <div class="arrow">
+                       <i class="ib icon icon-arrow  arrowUp"></i>
+                   </div>
+
                         <i class="all-img heart ib"></i>
                         <div class="text-center first-center">
                             <div>
@@ -58,7 +68,7 @@
                                     </i>
                                 </span>
                             </div>
-                            <div    style="position: relative;">
+                            <div    style="position: relative;width: 100%;height: inherit;">
                                 <div  class="font-say-delay"></div>
                                <span class="all-img ib font-say">
 
@@ -79,6 +89,11 @@
 
             <li class="screen" id="screen01" >
                 <div class="content hide">
+
+                    <div class="arrow">
+                        <i class="ib icon icon-arrow  arrowUp"></i>
+                    </div>
+
                     <div class="text-center wrapper">
                           <div class="ib circle-middle">
                               <i class="ib all-img question"></i>
@@ -122,12 +137,13 @@
 
             <li class="screen" id="screen02" >
                 <div class="content hide">
+
                     <div class="text-center wrapper">
                         <div class="ib" style="position: relative;">
-                            <div class="ib circle-middle">
-
+                            <div class="ib circle-middle"   style="border-color: #fff;">
+                                <i class="ib all-img women"></i>
                             </div>
-                            <i class="ib all-img women"></i>
+
                         </div>
 
                         <div>
@@ -152,7 +168,6 @@
 
                             </ul>
                         </div>
-
 
                         <button type="button" class="btnBase"   id="gameStart"><i class="all-img font-game ib"></i></button>
                     </div>
