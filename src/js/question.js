@@ -103,20 +103,20 @@ var MobileEvent = {
             }
 
             var title,content;
-            //显示结果  7-8
-            if(calc >=  7){
+            //显示结果  6-8
+            if(calc >=  6){
                 title   =   Message.success.title;
                 content =    Message.success.content;
                 MobileUI.result.addClass("success");
             }
-            //显示结果  5-6
-            else  if(calc >4 && calc  <7){
+            //显示结果  3-5
+            else  if(calc >=3 && calc  <= 5){
                 title   =   Message.errorless.title;
                 content =    Message.errorless.content;
                 MobileUI.result.addClass("error-less");
             }
-            //显示结果  4
-            else  if(calc <=4){
+            //显示结果  3
+            else  if(calc <3){
                 title   =   Message.error50.title;
                 content =    Message.error50.content;
                 MobileUI.result.addClass("error-50");
@@ -191,7 +191,7 @@ var MobileEvent = {
 
                 // 微信分享的数据
                 var wxData = {
-                    "imgUrl":'',
+                    "imgUrl":'http://121.42.27.119/schoolRecruit/imgs/weixin.png',
                     "link":'http://121.42.27.119/schoolRecruit/index.html',
                     "desc":'西安习悦信息技术有限公司之谯美美与习悦的故事',
                     "title":"西安习悦信息技术有限公司之谯美美与习悦的故事"

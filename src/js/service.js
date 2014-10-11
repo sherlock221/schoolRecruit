@@ -5,7 +5,7 @@ var MobileUI = {
     gameStart  :$("#gameStart")
 };
 
-var imgList = ["./imgs/school.png"];
+var imgList = ["./imgs/school.png","./imgs/icon.png"];
 
 var ld = new loadermsk(imgList, "#0e79ef", function () {
     MobileEvent.init();
@@ -71,7 +71,7 @@ var MobileEvent = {
 
                 // 微信分享的数据
                 var wxData = {
-                    "imgUrl":'',
+                    "imgUrl":'http://121.42.27.119/schoolRecruit/imgs/weixin.png',
                     "link":'http://121.42.27.119/schoolRecruit/index.html',
                     "desc":'西安习悦信息技术有限公司之谯美美与习悦的故事',
                     "title":"西安习悦信息技术有限公司之谯美美与习悦的故事"
