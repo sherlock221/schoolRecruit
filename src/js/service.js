@@ -77,6 +77,7 @@ var MobileEvent = {
                     "title":"西安习悦信息技术有限公司之谯美美与习悦的故事"
                 };
 
+
                 // 分享的回调
                 var wxCallbacks = {
                     // 分享操作开始之前
