@@ -18,8 +18,8 @@ module.exports = function(grunt) {
             css : {
                 src : ['src/css/common/normalize.css',
                 		'src/css/common/template.css',
-                		'src/css/common/cartoon.css',
-                		'src/css/index.css'],
+                		'src/css/common/cartoon.css'
+                		],
                 dest : 'dist/css/all.css'
             },
 
