@@ -68,15 +68,14 @@ var MobileEvent = {
 
             //分享
             WeixinApi.ready(function(Api){
-
+                var host  = window.location.protocol+"//"+window.location.host;
                 // 微信分享的数据
                 var wxData = {
-                    "imgUrl":'http://121.42.27.119/schoolRecruit/imgs/weixin.png',
-                    "link":'http://121.42.27.119/schoolRecruit/index.html',
+                    "imgUrl":host+'/schoolRecruit/imgs/weixin.png',
+                    "link":host+'/schoolRecruit/index.html',
                     "desc":'西安习悦信息技术有限公司之谯美美与习悦的故事',
                     "title":"西安习悦信息技术有限公司之谯美美与习悦的故事"
                 };
-
 
                 // 分享的回调
                 var wxCallbacks = {
