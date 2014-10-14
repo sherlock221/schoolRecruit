@@ -96,6 +96,8 @@ var MobileEvent = {
                     // 分享成功
                     confirm:function (resp) {
                         alert("分享成功！");
+                        console.log(resp);
+
                         // 分享成功了，我们是不是可以做一些分享统计呢？
                     },
                     // 整个分享过程结束
