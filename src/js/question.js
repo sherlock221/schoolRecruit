@@ -51,6 +51,7 @@ function loadData(data){
 var as = ["b","c","c","c","c","b","a","c"];
 
 var calc = 0;
+var temp = 0 ;
 
 var MobileEvent = {
     init: function () {
@@ -80,7 +81,6 @@ var MobileEvent = {
                 if(check.isPass){
 
                     if(i  >= 2){
-
                         var option = check.dom.closest("li").attr("option");
                         if(option == as[i-2]){
                             calc++
@@ -97,8 +97,6 @@ var MobileEvent = {
                     },1500);
                     return;
                 }
-
-
 
             }
 
@@ -127,6 +125,7 @@ var MobileEvent = {
 
             MobileUI.result.show();
             MobileUI.list.hide();
+            temp = calc;
             calc = 0 ;
 
         });
@@ -182,10 +181,7 @@ var MobileEvent = {
 
 
 
-
-
         if(typeof(WeixinApi)!="undefined"){
-
             //分享
             WeixinApi.ready(function(Api){
 
